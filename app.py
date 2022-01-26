@@ -64,11 +64,15 @@ st.write('You may also like the following:')
 beers_rec = list((final_df['name'][:5]))
 beer_style = list((final_df['style'][:5]))
 
-st.write("1. {}, style: {}.".format(beers_rec[0], beer_style[0]))
-st.write("2. {}, style: {}.".format(beers_rec[1], beer_style[1]))
-st.write("3. {}, style: {}.".format(beers_rec[2], beer_style[2]))
-st.write("4. {}, style: {}.".format(beers_rec[3], beer_style[3]))
-st.write("5. {}, style: {}.".format(beers_rec[4], beer_style[4]))
+if st.button("Predict beer!"):
+    st.write("1. {}, style: {}.".format(beers_rec[0], beer_style[0]))
+    st.write("2. {}, style: {}.".format(beers_rec[1], beer_style[1]))
+    st.write("3. {}, style: {}.".format(beers_rec[2], beer_style[2]))
+    st.write("4. {}, style: {}.".format(beers_rec[3], beer_style[3]))
+    st.write("5. {}, style: {}.".format(beers_rec[4], beer_style[4]))
+else:
+    st.write('Please click the above button when ready to get your prediction!')
+
 
 
 st.write(" ")

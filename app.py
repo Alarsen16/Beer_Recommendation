@@ -15,6 +15,12 @@ st.sidebar.write(" ")
 st.sidebar.write("Data is taken from BeerAdvocate where we used beer ratings and reviews submitted by fellow beer"
     ' drinkers, as well as beer descriptions, mainly submitted by the breweries themselves.')
 
+st.sidebar.write(" ")
+st.sidebar.write(" ")
+st.sidebar.write(" ")
+st.sidebar.write(" ")
+st.sidebar.write("by Adam Larsen, Flatiron School DS Program, 2022 ")
+
     
 beer_df = pd.DataFrame(beer_csv)
 

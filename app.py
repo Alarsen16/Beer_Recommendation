@@ -32,7 +32,7 @@ beer = st.selectbox('Pick your favorite beer:', beer_choice)
 
 tf = TfidfVectorizer(analyzer='word', ngram_range=(1, 3), min_df = 1, max_features=200)
 
-tfid_vec = tf.fit_transform(beer_df['combined_text'])
+tfid_vec = tf.fit_transform(beer_df['combined_concat'])
 chosen_beer_df = beer_df[beer_df['name'] == beer]
 closeness = cosine_similarity(tfid_vec, tfid_vec[chosen_beer_df.index])
 
@@ -43,8 +43,8 @@ chosen_beer_df = beer_df[beer_df['name'] == beer]
 beerless_df = beer_df.drop(chosen_beer_df.index)
 
 
-chosen_beer_df_array = np.array((chosen_beer_df[['look', 'smell', 'taste', 'feel', 'overall', 'score', 'cosine']]))
-beerless_df_array = np.array((beerless_df[['look', 'smell', 'taste', 'feel', 'overall', 'score', 'cosine']]))
+chosen_beer_df_array = np.array((chosen_beer_df[['look', 'smell', 'taste', 'feel', 'overall', 'similarity']]))
+beerless_df_array = np.array((beerless_df[['look', 'smell', 'taste', 'feel', 'overall', 'similarity']]))
 
 
 numerators = np.array([chosen_beer_df_array[0].dot(beers) for beers in beerless_df_array[0:]])

@@ -60,8 +60,6 @@ As for next steps and items that are achievable within the next half a year, I�
 
 Please use this model and let me know if you have any questions or ideas on how to improve it. Cheers on trying a new beer!
 
-## Repo Structure
-
 ## Repository Structure
 ```
 ├── [workbook / data cleaning]
